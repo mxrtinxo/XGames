@@ -109,3 +109,18 @@
   font-size: 22px;
 
 }
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+.form-label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.form-control {
+  
+  margin-right: 300px; 
+}
