@@ -177,10 +177,13 @@
                 <a class="nav-link active" href="nosotros.html">Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="registro.html">Registrarse</a>
+                <a class="nav-link active" href="misDatos.html">Mis datos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="Ingresar.html">Iniciar sesion</a>
+                <a class="nav-link active" href="administrar.html">Administrar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Cerrar sesion</a>
               </li>
             </ul>
 
@@ -201,7 +204,7 @@
         <section class="text-center">
           <br>
           <br>
-          <h1>Mantenedor de usuarios</h1>
+          <h1>Mantenedor de Productos</h1>
           <br>
           <br>
           <form class="row g-3 needs-validation" action="">
@@ -209,152 +212,106 @@
             <div class="container-fluid">
               <div class="row">
                 <!-- Campos del registro de usuario -->
-                <div class="col-sm-12 col-md-8">
-                  <div class="form-group">
-                    <label for="id" class="form-label">ID</label>
-                    <input type="text" class="form-control form-control-sm" id="rut" placeholder="Escriba el id" required>
-                    <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
+        <!-- Formulario para ingresar producto a la bodega -->
+        <main class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="mb-3">
+                      <label for="nombres" class="form-label">ID:</label>
+                      <input type="text" class="form-control form-control-sm" id="nombres" placeholder="Escriba los id" required>
+                      <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
                   </div>
-                  <br>
-                  <div class="form-group" style="margin-bottom: 20px;">
-                    <label for="tipoUsuario" class="form-label">Categoría</label>
-                    <div class="btn-group">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
-                        aria-controls="collapseExample">
-                        Seleccionar Categoría
-                      </button>
-                    </div>
-                    <div class="collapse" id="collapseExample">
-                      <div class="card card-body">
-                        <ul class="list-group">
-                          <li class="list-group-item"><input type="radio" name="categoria" value="Videojuegos de acción">RPG</li>
-                          <li class="list-group-item"><input type="radio" name="categoria" value="Videojuegos de aventura">MMO</li>
-                          <li class="list-group-item"><input type="radio" name="categoria" value="Videojuegos de deporte">Shooters</li>
-                          <li class="list-group-item"><input type="radio" name="categoria" value="Videojuegos de deporte">Carreras</li>
-                        </ul>
-                      </div>
-                    </div>
+                  <div class="mb-3">
+                      <label for="categoria" class="form-label">Categoría:</label>
+                      <select id="categoria" class="form-select" aria-label="Selecciona la categoría">
+                          <option selected>Selecciona la categoría</option>
+                          <option value="1">RPG</option>
+                          <option value="2">Aventuras</option>
+                          <option value="3">Shooter</option>
+                      </select>
                   </div>
-                  <br>
-                  <br>
-                  <div class="form-group">
-                    <label for="descripcion" class="form-label">Descripción</label>
-                    <textarea class="form-control form-control-sm" id="descripcion" rows="3"
-                      placeholder="Escriba una descripción" required></textarea>
-                    <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
+                  <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre del producto:</label>
+                      <select id="nombre" class="form-select" aria-label="Selecciona el nombre del videojuego">
+                          <option selected>Selecciona el nombre del videojuego</option>
+                          <option value="1">Tomb Raider</option>
+                          <option value="2">Fortnite</option>
+                          <option value="3">Call Of Duty 3</option>
+                      </select>
                   </div>
-                  <br>
-                  <div class="form-group">
-                    <label for="precio" class="form-label">$15.000</label>
-                    <input type="text" class="form-control form-control-sm" id="precio"
-                      placeholder="Escriba el precio" required>
-                    <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
+                  <div class="mb-3">
+                      <label for="descripcion" class="form-label">Descripción:</label>
+                      <input type="text" class="form-control form-control-sm" id="descripcion" placeholder="Escriba la descripción" required>
+                      <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
                   </div>
-                  <br>
-                  <div class="form-group">
-                    <label for="descSubscriptor" class="form-label">15%</label>
-                    <input type="text" class="form-control form-control-sm" id="descSubscriptor"
-                      placeholder="Escriba el descuento para subscriptores" required>
-                    <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
+                  <div class="mb-3">
+                      <label for="precio" class="form-label">Precio:</label>
+                      <input type="text" class="form-control form-control-sm" id="precio" placeholder="Escriba el precio" required>
+                      <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
                   </div>
-                  <br>
-                  <div class="form-group">
-                    <label for="descOferta" class="form-label">2%</label>
-                    <input type="text" class="form-control form-control-sm" id="descOferta"
-                      placeholder="Escriba el descuento por oferta" required>
-                    <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
+                  <div class="mb-3">
+                      <label for="desc_subscriptor" class="form-label">Descuento subscriptor:</label>
+                      <input type="text" class="form-control form-control-sm" id="desc_subscriptor" placeholder="Escriba el descuento para subscriptores" required>
+                      <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
                   </div>
-                  <br>
-
-                  <button type="submit" class="btn btn-primary boton-pag-registrarse">Guardar</button>
-                  <button type="reset" class="btn btn-primary boton-pag-registrarse">Nuevo</button>
-                  <button type="reset" class="btn btn-primary boton-pag-registrarse">Eliminar</button>
-                </div>
-                <br>
-                <br>
-                <!-- Foto de perfil -->
-                <div class="col">
-                  <table>
-                    <tr>
-                      <td>
-                        <img src="img/b5126803cf115b044849b64ca565a4a7.jpg" alt="" class="user-image">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <br>
-                        <input type="file" class="btn btn-primary">
-                      </td>
-                    </tr>
-                  </table>
-                </div>
+                  <div class="mb-3">
+                      <label for="desc_oferta" class="form-label">Descuento por oferta:</label>
+                      <input type="text" class="form-control form-control-sm" id="desc_oferta" placeholder="Escriba el descuento por oferta" required>
+                      <div class="invalid-feedback">Debe llenar el campo que quieres modificar</div>
+                  </div>
+                  <button class="btn btn-primary" onclick="guardarFormulario()">Guardar</button>
+                  <button class="btn btn-primary" onclick="nuevoProducto()">Nuevo</button>
+                  <button class="btn btn-primary" onclick="eliminarProducto()">Eliminar</button>
               </div>
-            </div>
-          </form>
-        </section>
+              <div class="col-md-6 text-center">
+                  <img src="img/tomb-raider-definitive-edition-20141410411_1.jpg" class="img-fluid" alt="Tomb Raider">
+              </div>
+          </div>
+      </main>
+      <div class="container">
+          <table>
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Categoría</th>
+                      <th>Nombre</th>
+                      <th>Descripción</th>
+                      <th>Precio</th>
+                      <th>Desc Subscriptor</th>
+                      <th>Desc Oferta</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1</td>
+                      <td>RPG</td>
+                      <td>Tomb Raider Edition Ilimitada</td>
+                      <td>Juego de Aventura</td>
+                      <td>18.000</td>
+                      <td>%5</td>
+                      <td>%2</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td>Aventuras</td>
+                      <td>Fortnite</td>
+                      <td>Juego Multijugador</td>
+                      <td>25.000</td>
+                      <td>%3</td>
+                      <td>%1</td>
+                  </tr>
+                  <tr>
+                      <td>3</td>
+                      <td>Shooter</td>
+                      <td>Call Of Duty 3</td>
+                      <td>Acción en Primera Persona</td>
+                      <td>30.000</td>
+                      <td>%2</td>
+                      <td>%0</td>
+                  </tr>
+              </tbody>
+          </table>
       </div>
-
-
-
-    </main>
-    <div class="container">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Categoría</th>
-            <th>RUT</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>Descuento Subscriptor</th>
-            <th>Descuento por Oferta</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>RPG</td>
-            <td>12.345.678-9</td>
-            <td>Undertale</td>
-            <td>$50.000</td>
-            <td>10%</td>
-            <td>20%</td>
-            <td>
-              <button>Editar</button>
-              <button>Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>MMO</td>
-            <td>98.765.432-1</td>
-            <td>Black Desert</td>
-            <td>$40.000</td>
-            <td>15%</td>
-            <td>25%</td>
-            <td>
-              <button>Editar</button>
-              <button>Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Shooters</td>
-            <td>11.222.333-4</td>
-            <td>Warframe</td>
-            <td>$60.000</td>
-            <td>5%</td>
-            <td>15%</td>
-            <td>
-              <button>Editar</button>
-              <button>Eliminar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
     <!-- Pie de página -->
     <br>
     <br>

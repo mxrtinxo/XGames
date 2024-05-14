@@ -159,10 +159,13 @@
                   <a class="nav-link active" href="nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="registro.html">Registrarse</a>
+                  <a class="nav-link active" href="misDatos.html">Mis datos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="Ingresar.html">Iniciar sesion</a>
+                  <a class="nav-link active" href="administracion.html">Administrar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Cerrar sesion</a>
                 </li>
               </ul>
     
@@ -187,7 +190,7 @@
                 <br>
                 <br>
                 <form class="row g-3 needs-validation" action="">
-
+                  
                     <div class="container-fluid">
                         <div class="row">
                             <!-- Campos del registro de usuario -->
@@ -206,7 +209,7 @@
                                           Cliente
                                       </label>
                                   </div>
-                                  <li></li>
+                              <br>
                                   <div class="form-check">
                                       <input class="form-check-input" type="radio" name="Usuario" id="flexRadioDefault2" checked>
                                       <label class="form-check-label" for="flexRadioDefault2">
@@ -325,8 +328,8 @@
             <td>Si</td>
             <td><img src="img/persona.jpg" alt="Avatar" style="width: 50px;"></td>
             <td>
-              <button>Editar</button>
-              <button>Eliminar</button>
+              <button type="button" class="btn btn-primary" onclick="editar()">Editar</button>
+              <button type="button" class="btn btn-primary" onclick="eliminar()">Eliminar</button>
             </td>
           </tr>
           <tr>
@@ -340,8 +343,8 @@
             <td>No</td>
             <td><img src="img/persona2.jpg" alt="Avatar" style="width: 50px;"></td>
             <td>
-              <button>Editar</button>
-              <button>Eliminar</button>
+              <button type="button" class="btn btn-primary" onclick="editar()">Editar</button>
+              <button type="button" class="btn btn-primary" onclick="eliminar()">Eliminar</button>
             </td>
           </tr>
         </tbody>
